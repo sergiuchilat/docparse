@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/DocParse.php';
+require_once '../src/lib/DocParse.php';
 use \merax\DocParse\Parser;
 $fileParser = new Parser();
 $filename = 'data/keywords.docx';

@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/DocParse.php';
+require_once '../src/lib/DocParse.php';
 use \merax\DocParse\Parser;
 $fileParser = new Parser();
 $keywords = $fileParser->setKeywordsValue($_POST['file_name'], $_POST['keywords']);
