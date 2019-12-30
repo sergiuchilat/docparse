@@ -16,7 +16,9 @@ class Parser
     }
 
     public function setKeywordsValue($filename= '', $keywords = []){
+        echo '<pre>';
         print_r($keywords);
+        echo '</pre>';
         return $filename;
     }
 }
