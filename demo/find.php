@@ -1,8 +1,8 @@
 <?php
-require_once '../src/lib/DocParse.php';
+require_once '../src/init.php';
 use \merax\DocParse\Parser;
 $fileParser = new Parser();
-$filename = 'data/keywords.docx';
+$filename = $_POST['file_name'];
 $keywords = $fileParser->extractKeywords($filename);
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $keywords = $fileParser->extractKeywords($filename);
 <body>
     <form method="post" action="replace.php">
         <? foreach ($keywords as $keyword) {?>
-            <?=$keyword?><input type="text" name=keywords["<?=$keyword?>"]> <br>
+            <?=$keyword?><input type="text" name="keywords[<?=$keyword?>]"> <br>
         <?}?>
         <strong>Filename</strong><input type="text" name="file_name" value="<?=$filename;?>"> <br>
         <input type="submit" value="Parse">
