@@ -2,7 +2,7 @@
 require_once '../src/init.php';
 use \merax\DocParse\Parser;
 $fileParser = new Parser();
-$filename = 'data/keywords.docx';
+$filename = 'data/keywords.doc';
 $keywords = $fileParser->extractKeywords($filename);
 ?>
 <!DOCTYPE html>
