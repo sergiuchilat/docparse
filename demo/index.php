@@ -1,8 +1,11 @@
 <?php
+require "../src/init.php";
+use merax\docparser\DocParse;
+
 $files = [
-    'data/keywords.doc',
-    'data/keywords2.docx',
-    'data/keywords3.doc'
+    'keywordss.docx',
+    'ex1.docx',
+    'ex.docx'
 ];
 ?>
 <!DOCTYPE html>

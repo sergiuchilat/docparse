@@ -1,8 +1,8 @@
 <?php
 require_once '../src/init.php';
-use \merax\DocParse\Parser;
-$fileParser = new Parser();
-$keywords = $fileParser->setKeywordsValue($_POST['file_name'], $_POST['keywords']);
+//var_dump($_POST);
+//die();
+$fileParser = new \merax\docparser\DocParse();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +11,8 @@ $keywords = $fileParser->setKeywordsValue($_POST['file_name'], $_POST['keywords'
     <title>DOCx Keywords finder</title>
 </head>
 <body>
-<pre>
-<?
-print_r($_POST);
-?>
-    </pre>
+
+    <a href="<?=$fileParser->setKeywordsValue($_POST['file_name'], $_POST['keywords']);?>" >Downlad Result</a>
+
 </body>
 </html>

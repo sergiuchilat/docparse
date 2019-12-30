@@ -1,10 +1,13 @@
 <?php
 require_once '../src/init.php';
-use \merax\DocParse\Parser;
-$fileParser = new Parser();
+
+use merax\docparser\DocParse;
+
+$fileParser = new DocParse();
 $filename = $_POST['file_name'];
 $keywords = $fileParser->extractKeywords($filename);
-?>
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
