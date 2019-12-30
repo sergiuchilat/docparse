@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'setasign\\Fpdi\\' => array($vendorDir . '/setasign/fpdi/src'),
-    'doc2pdf\\' => array($baseDir . '/converter'),
+    'merax\\docparser\\' => array($baseDir . '/src/lib'),
     'Zend\\Escaper\\' => array($vendorDir . '/zendframework/zend-escaper/src'),
     'PhpOffice\\PhpWord\\' => array($vendorDir . '/phpoffice/phpword/src/PhpWord'),
     'PhpOffice\\Common\\' => array($vendorDir . '/phpoffice/common/src/Common'),

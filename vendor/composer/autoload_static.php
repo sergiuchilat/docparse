@@ -11,9 +11,9 @@ class ComposerStaticInit8b66923c4d7888224f9bc1d893551296
         array (
             'setasign\\Fpdi\\' => 14,
         ),
-        'd' => 
+        'm' => 
         array (
-            'doc2pdf\\' => 8,
+            'merax\\docparser\\' => 16,
         ),
         'Z' => 
         array (
@@ -35,9 +35,9 @@ class ComposerStaticInit8b66923c4d7888224f9bc1d893551296
         array (
             0 => __DIR__ . '/..' . '/setasign/fpdi/src',
         ),
-        'doc2pdf\\' => 
+        'merax\\docparser\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/converter',
+            0 => __DIR__ . '/../..' . '/src/lib',
         ),
         'Zend\\Escaper\\' => 
         array (
