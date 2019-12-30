@@ -1,0 +1,24 @@
+{
+    "name": "daniel/docx2pdf",
+    "description": "My library",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergiu Chilat",
+            "email": "chilatsergiu@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fpdf/fpdf": "^1.81",
+        "setasign/fpdi-tcpdf": "^2.2",
+        "phpoffice/phpword": "^0.17.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "merax\\docparser\\": "src/lib/"
+        },
+        "classmap-authoritative": true
+    }
+}
