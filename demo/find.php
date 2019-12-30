@@ -2,10 +2,12 @@
 require_once '../src/init.php';
 
 use merax\docparser\DocParse;
-
-$fileParser = new DocParse();
 $filename = $_POST['file_name'];
-$keywords = $fileParser->extractKeywords($filename);
+$fileParser = new DocParse($filename);
+
+$fileParser->setTagOptions($tags, $_POST['tag']);
+$keywords = $fileParser->extractKeywords();
+print_r($keywords);
 
  ?>
 <!DOCTYPE html>
@@ -20,6 +22,7 @@ $keywords = $fileParser->extractKeywords($filename);
             <?=$keyword?><input type="text" name="keywords[<?=$keyword?>]"> <br>
         <?}?>
         <strong>Filename</strong><input type="text" name="file_name" value="<?=$filename;?>"> <br>
+        <strong>Tag</strong><input type="text" name="tag" value="<?=$_POST['tag'];?>"> <br>
         <input type="submit" value="Parse">
     </form>
 </body>

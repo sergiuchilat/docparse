@@ -3,10 +3,12 @@ require "../src/init.php";
 use merax\docparser\DocParse;
 
 $files = [
-    'keywordss.docx',
-    'ex1.docx',
-    'ex.docx'
+    'keywordss_${}.docx',
+    'keywordss_$[].docx',
 ];
+
+$tags = include '../src/tags.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +18,19 @@ $files = [
 </head>
 <body>
 <form method="post" action="find.php">
-    <select name="file_name">
+  File
+  <select name="file_name">
         <? foreach ($files as $file) {?>
             <option value="<?=$file;?>"><?=$file;?></option>
         <?}?>
     </select>
+  <br>
+    Tag <select name="tag">
+        <? foreach ($tags as $tagKey => $tagValue) {?>
+          <option value="<?=$tagKey;?>"><?=$tagKey;?></option>
+        <?}?>
+    </select>
+    <br>
     <input type="submit" value="Load File">
 </form>
 </body>
